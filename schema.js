@@ -6,6 +6,7 @@ exports.typeDefs = gql`
     product(id: ID!): Product
     categories: [Category!]!
     category(id: ID!): Category
+    artists: [Artist!]!
   }
   type Product {
     id: ID!
@@ -29,6 +30,10 @@ exports.typeDefs = gql`
     title: String!
     comment: String!
     rating: Int!
+  }
+  type Artist {
+    id: ID!
+    name: String!
   }
   input ProductsFilterInput {
     onSale: Boolean

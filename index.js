@@ -5,7 +5,7 @@ const { Category } = require("./resolvers/Category");
 const { Product } = require("./resolvers/Product");
 const { categories, products, reviews } = require("./db");
 
-const database = require('./database/config/db');
+const database = require('./config/config.json');
 
 const server = new ApolloServer({
     typeDefs,
@@ -18,7 +18,7 @@ const server = new ApolloServer({
       categories, 
       products,
       reviews,
-    }
+    },
 });
 
 server.listen().then(({ url }) => {

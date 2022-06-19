@@ -1,4 +1,5 @@
 const { reviews } = require("../db");
+const { artists } = require('../models/artists');
 
 exports.Query = {
   products: (parent, {filter}, {products}) => {
@@ -40,5 +41,6 @@ exports.Query = {
   categories: () => categories,
   category: (parent, {id}, {categories}) => {
       return categories.find((category) => category.id === id)
-  }
+  },
+  artists: () => artists,
 };
