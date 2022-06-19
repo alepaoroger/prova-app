@@ -5,6 +5,8 @@ const { Category } = require("./resolvers/Category");
 const { Product } = require("./resolvers/Product");
 const { categories, products, reviews } = require("./db");
 
+const database = require('./database/config/db');
+
 const server = new ApolloServer({
     typeDefs,
     resolvers: {
